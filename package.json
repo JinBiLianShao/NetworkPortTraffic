@@ -1,0 +1,52 @@
+{
+  "name": "network-port-traffic",
+  "productName": "NetworkPortTraffic",
+  "description": "这是一个网络串线器,用于接收指定端口的网络数据包,并将其转发到指定的IP地址和端口。",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.1",
+  "author": "liansixin",
+  "license": "MIT",
+  "build": {
+    "productName": "NetworkPortTraffic",
+    "appId": "com.NetworkPortTraffic",
+    "directories": {
+      "output": "app_file"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./main.ico",
+      "uninstallerIcon": "./main.ico",
+      "installerHeaderIcon": "./main.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "NetworkPortTraffic"
+    },
+    "win": {
+      "icon": "./main.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "yarn": "^1.22.22"
+  },
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3",
+    "node-gyp": "^10.2.0",
+    "node-gyp-build": "^4.8.1"
+  }
+}
