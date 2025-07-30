@@ -1,8 +1,6 @@
 {
   "name": "network-port-traffic",
-  "productName": "NetworkPortTraffic",
-  "description": "这是一个网络串线器,用于接收指定端口的网络数据包,并将其转发到指定的IP地址和端口。",
-  "keywords": [],
+  "description": "网络串线器，用于接收指定端口的数据包并转发到指定IP和端口。",
   "main": "./main.js",
   "version": "1.0.1",
   "author": "liansixin",
@@ -19,7 +17,6 @@
       "allowToChangeInstallationDirectory": true,
       "installerIcon": "./main.ico",
       "uninstallerIcon": "./main.ico",
-      "installerHeaderIcon": "./main.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "NetworkPortTraffic"
@@ -30,7 +27,8 @@
         {
           "target": "nsis",
           "arch": [
-            "ia32"
+            "ia32",
+            "x64"
           ]
         }
       ]
@@ -40,13 +38,15 @@
     "start": "electron .",
     "build": "electron-builder"
   },
-  "dependencies": {
-    "yarn": "^1.22.22"
-  },
   "devDependencies": {
-    "electron": "^37.1.0",
+    "app-builder-lib": "^26.0.12",
+    "electron": "^37.2.4",
     "electron-builder": "^26.0.12",
-    "node-gyp": "^11.3.0",
-    "node-gyp-build": "^4.8.4"
+    "electron-builder-squirrel-windows": "^26.0.12",
+    "electron-winstaller": "^5.4.0",
+    "rimraf": "^2.6.3",
+    "temp": "^0.9.4",
+    "node-gyp": "^10.2.0",
+    "node-gyp-build": "^4.8.1"
   }
 }
